@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 800px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #cccccc;
+        }
+        
+        li {
+            text-align: center;
+            line-height: 150px;
+            list-style: none;
+            height: 150px;
+            /*height: auto;*/
+            width: 150px;
+            border: 1px solid #2e6da4;
+            background-color: #abc;
+            margin: 10px;
+        }
+        
+        ul {
+            /*伸缩布局首要条件*/
+            display: flex;
+            height: 500px;
+            /*基线对齐的前提条件是行内轴必须保持再一条线上，如果不再一条线上，那么想便宜元素达到再一条线上,如line-height高度不一直*/
+            align-items: flex-start;
+            /*盒子拉伸必须满足子盒子的height是min-height属性*/
+            align-items: baseline;
+        }
+        
+        ul li:nth-child(1) {
+            line-height: 80px;
+        }
+        
+        ul li:nth-child(3) {
+            line-height: 80px;
+        }
+        
+        ul li:nth-child(5) {
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+flex-start： 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+flex-end： 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+center： 弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+baseline： 如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+stretch： 如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+-->
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+
+</html>

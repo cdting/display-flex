@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>布局方向</title>
+    <style type="text/css">
+        /*flex-direction取值：*/
+        /*row： 主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。*/
+        /*row-reverse： 对齐方式与row相反。*/
+        /*column： 主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。*/
+        /*column-reverse： 对齐方式与column相反。*/
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 800px;
+            margin: 100px auto;
+            border: 1px solid #cccccc;
+        }
+        
+        li {
+            text-align: center;
+            line-height: 150px;
+            list-style: none;
+            height: 150px;
+            width: 150px;
+            border: 1px solid #2e6da4;
+            background-color: #a1a1a1;
+            margin: 10px;
+        }
+        
+        ul {
+            /*伸缩布局首要条件*/
+            display: flex;
+            /*行显示*/
+            flex-direction: row;
+            /*列显示*/
+            /*flex-direction: column;*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        1.伸缩布局请必须为主盒子为伸缩布局盒子：display:flex
+        2.设置属性来调整主盒子元素的布局方式：flex-direction
+    -->
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+
+</html>

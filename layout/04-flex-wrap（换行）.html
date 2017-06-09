@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*该属性控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 800px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #cccccc;
+        }
+        
+        li {
+            text-align: center;
+            line-height: 150px;
+            list-style: none;
+            /*height: 150px;*/
+            height: auto;
+            width: 150px;
+            border: 1px solid #2e6da4;
+            background-color: #abc;
+            margin: 10px;
+        }
+        
+        ul {
+            /*伸缩布局首要条件*/
+            display: flex;
+            /*无论多少元素 ，按比例缩放线上再一行，display:flex默认就是这种模式*/
+            flex-wrap: nowrap;
+            /*正常显示，显示不下就换行*/
+            /*flex-wrap:wrap;*/
+            /*反转换行显示*/
+            /*flex-wrap: wrap-reverse;*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+nowrap： flex容器为单行。该情况下flex子项可能会溢出容器
+wrap： flex容器为多行。该情况下flex子项溢出的部分会被放置到新行，子项内部会发生断行
+wrap-reverse： 反转 wrap 排列。
+-->
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+</body>
+
+</html>

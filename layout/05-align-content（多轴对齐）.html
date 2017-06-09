@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 800px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #cccccc;
+        }
+        
+        li {
+            text-align: center;
+            line-height: 150px;
+            list-style: none;
+            /*height: 150px;*/
+            height: auto;
+            width: 150px;
+            border: 1px solid #2e6da4;
+            background-color: #abc;
+            margin: 10px;
+        }
+        
+        ul {
+            /*伸缩布局首要条件*/
+            display: flex;
+            flex-wrap: wrap;
+            /*没设置高度，使用无效*/
+            height: 500px;
+            /*必须配合flex-wrap才可以使用，并且不许设置为换行：wrap*/
+            /*于justify-content的区别在于行级列中均与铺开，align-content是行级均匀铺开*/
+            align-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+flex-start： 各行向弹性盒容器的起始位置堆叠。
+flex-end： 各行向弹性盒容器的结束位置堆叠
+center： 各行向弹性盒容器的中间位置堆叠。
+space-between： 各行在弹性盒容器中平均分布。
+space-around： 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半
+stretch： 各行将会伸展以占用剩余的空间。
+ -->
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+
+</html>

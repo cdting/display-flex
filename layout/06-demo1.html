@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*只适应布局*/
+        
+        .box {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            /* 列显示 */
+            flex-direction: column;
+            /* 盒子两边左对齐右对齐不变，中间变换大小 */
+            justify-content: space-between;
+        }
+        
+        .hearder {
+            height: 50px;
+            background-color: #abc;
+        }
+        
+        .center {
+            /*出去顶部和底部固定高度外，加flex: 1 剩余高度就是center的*/
+            flex: 1;
+            display: flex;
+        }
+        
+        .center .nav {
+            background-color: #def;
+            width: 150px;
+        }
+        
+        .center .content {
+            background-color: #5cb85c;
+            flex: 1;
+        }
+        
+        .foot {
+            height: 50px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div class="hearder">头部</div>
+        <div class="center">
+            <div class="nav">中部左边</div>
+            <div class="content">中部右边</div>
+        </div>
+        <div class="foot">底部</div>
+    </div>
+
+</body>
+
+</html>
